@@ -23,8 +23,8 @@
 <link rel="manifest" href="/akureyrilodge-preview/site.webmanifest">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Apartment","name":"The Classic Apartment, Akureyri Lodge","url":"https://akureyrilodge.is/apartments/classic-apartment/","numberOfBedrooms":2,"floorSize":{"@type":"QuantitativeValue","value":52,"unitCode":"MTK"},"occupancy":{"@type":"QuantitativeValue","maxValue":4},"containedInPlace":{"@id":"https://akureyrilodge.is/#lodge"},"address":{"@type":"PostalAddress","streetAddress":"Lækjargata 3","postalCode":"600","addressLocality":"Akureyri","addressCountry":"IS"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://akureyrilodge.is/"},{"@type":"ListItem","position":2,"name":"The Classic Apartment","item":"https://akureyrilodge.is/apartments/classic-apartment/"}]}</script>
-  <script type="module" crossorigin src="/akureyrilodge-preview/assets/site-BiGS4ll1.js"></script>
-  <link rel="stylesheet" crossorigin href="/akureyrilodge-preview/assets/site-Bv44mWe-.css">
+  <script type="module" crossorigin src="/akureyrilodge-preview/assets/site-Db6ZnD8c.js"></script>
+  <link rel="stylesheet" crossorigin href="/akureyrilodge-preview/assets/site-B5kmF-y6.css">
 </head>
 <body class="lp is-apt">
 
@@ -148,22 +148,48 @@
   <form class="bk-bar" novalidate>
     <div class="bk-top">
       <div><p class="h3" id="bk-h" tabindex="-1">Book your stay</p>
-        <p class="it" style="margin-top:4px">( Akureyri Lodge, Lækjargata 3 )</p></div>
+        <p class="it bk-sub">( Akureyri Lodge, Lækjargata 3 )</p></div>
       <button class="bk-x" type="button" data-book-close aria-label="Close booking sheet"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 8l16 16M24 8 8 24"/></svg></button>
     </div>
-    <div>
-      <label for="bk-apt">Apartment</label>
-      <select id="bk-apt" name="apartment" autocomplete="off"><option value="">Any apartment</option><option value="grand-residence" data-max="10">The Grand Residence · up to 8 guests, 2 more on request</option><option value="classic-apartment" data-max="4">The Classic Apartment · up to 4 guests</option><option value="cosy-studio" data-max="4">The Cosy Studio · up to 2 guests, 2 more on the sofa bed</option></select>
+    <div class="bk-body" data-lenis-prevent>
+      <fieldset class="bk-apts">
+        <legend class="bk-l">Apartment</legend>
+        <div class="bk-aptlist">
+          <label class="bk-apt"><input type="radio" name="apartment" value="" data-name="Any apartment" data-max="8" checked>
+            <span class="bk-apt-ph bk-apt-ph--all" aria-hidden="true"><img alt="" width="56" height="56" data-sd="/akureyrilodge-preview/img/bk-grand.webp"><img alt="" width="56" height="56" data-sd="/akureyrilodge-preview/img/bk-classic.webp"><img alt="" width="56" height="56" data-sd="/akureyrilodge-preview/img/bk-cosy.webp"></span>
+            <span class="bk-apt-tx"><span class="bk-apt-n"><span class="lg">Any apartment</span><span class="sm">Any</span></span><span class="bk-apt-m"><span class="lg">Whichever is free</span><span class="sm">free</span></span></span></label>
+          <label class="bk-apt"><input type="radio" name="apartment" value="grand-residence" data-name="The Grand Residence" data-max="10" data-up="8" data-more="2 more on request">
+            <span class="bk-apt-ph" aria-hidden="true"><img alt="" width="56" height="56" data-sd="/akureyrilodge-preview/img/bk-grand.webp"></span>
+            <span class="bk-apt-tx"><span class="bk-apt-n"><span class="lg">The Grand Residence</span><span class="sm">Grand</span></span><span class="bk-apt-m"><span class="lg">116 m² · up to 8 guests</span><span class="sm">up to 8</span></span></span></label><label class="bk-apt"><input type="radio" name="apartment" value="classic-apartment" data-name="The Classic Apartment" data-max="4" data-up="4" data-more="">
+            <span class="bk-apt-ph" aria-hidden="true"><img alt="" width="56" height="56" data-sd="/akureyrilodge-preview/img/bk-classic.webp"></span>
+            <span class="bk-apt-tx"><span class="bk-apt-n"><span class="lg">The Classic Apartment</span><span class="sm">Classic</span></span><span class="bk-apt-m"><span class="lg">52 m² · up to 4 guests</span><span class="sm">up to 4</span></span></span></label><label class="bk-apt"><input type="radio" name="apartment" value="cosy-studio" data-name="The Cosy Studio" data-max="4" data-up="2" data-more="2 more on the sofa bed">
+            <span class="bk-apt-ph" aria-hidden="true"><img alt="" width="56" height="56" data-sd="/akureyrilodge-preview/img/bk-cosy.webp"></span>
+            <span class="bk-apt-tx"><span class="bk-apt-n"><span class="lg">The Cosy Studio</span><span class="sm">Cosy</span></span><span class="bk-apt-m"><span class="lg">40 m² · up to 2 guests</span><span class="sm">up to 2</span></span></span></label>
+        </div>
+      </fieldset>
       <div class="bk-dates">
-        <div><label for="bk-in">Arrival</label><input id="bk-in" name="checkin" type="date" autocomplete="off" required></div>
-        <div><label for="bk-out">Departure</label><input id="bk-out" name="checkout" type="date" autocomplete="off" required></div>
+        <div class="bk-when">
+          <p class="bk-l" id="bk-cal-l">Dates</p>
+          <p class="bk-range"><span data-from>Arrival</span> <span class="it">to</span> <span data-to>Departure</span></p>
+        </div>
+        <div class="bk-gst">
+          <div><p class="bk-l" id="bk-g-l">Guests</p><p class="bk-gnote" aria-live="polite"></p></div>
+          <div class="bk-step" role="group" aria-labelledby="bk-g-l">
+            <button class="bk-minus" type="button" aria-label="One guest fewer"><svg class="bk-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12h12"/></svg></button>
+            <output class="bk-n" for="bk-guests">2 guests</output>
+            <button class="bk-plus" type="button" aria-label="One guest more"><svg class="bk-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12h12M12 6v12"/></svg></button>
+          </div>
+        </div>
+        <div class="bk-months" role="group" aria-labelledby="bk-cal-l"></div>
       </div>
-      <label for="bk-guests">Guests</label>
-      <select id="bk-guests" name="guests" autocomplete="off"><option value="1">1 guest</option><option value="2" selected>2 guests</option><option value="3">3 guests</option><option value="4">4 guests</option><option value="5">5 guests</option><option value="6">6 guests</option><option value="7">7 guests</option><option value="8">8 guests</option><option value="9">9 guests</option><option value="10">10 guests</option></select>
-      <p class="bk-note it" aria-live="polite"></p>
-      <button class="lp-btn lp-btn--black lp-btn--wide" type="submit"><span class="spin" data-hover="Check availability"><span>Check availability</span></span><svg class="arr" viewBox="0 0 32 32" aria-hidden="true"><path d="M8 16h16m0 0-6-6m6 6-6 6"/></svg></button>
     </div>
-    <p class="bk-foot">Booking is completed on our secure booking page; payment never passes through this site. Questions? Email <a href="mailto:akureyrilodge@akureyrilodge.is">akureyrilodge@akureyrilodge.is</a>.</p>
+    <div class="bk-end">
+      <p class="bk-sum" aria-live="polite"></p>
+      <button class="lp-btn lp-btn--black" type="submit"><span class="spin" data-hover="Check availability"><span>Check availability</span></span><svg class="arr" viewBox="0 0 32 32" aria-hidden="true"><path d="M8 16h16m0 0-6-6m6 6-6 6"/></svg></button>
+      <p class="bk-note it" aria-live="polite"></p>
+      <p class="bk-foot">Booking is completed on our secure booking page; payment never passes through this site. Questions? Email <a href="mailto:akureyrilodge@akureyrilodge.is">akureyrilodge@akureyrilodge.is</a>.</p>
+    </div>
+    <input type="hidden" id="bk-apt" value=""><input type="hidden" id="bk-in" name="checkin"><input type="hidden" id="bk-out" name="checkout"><input type="hidden" id="bk-guests" name="guests" value="2">
   </form>
 </div>
 </body>
